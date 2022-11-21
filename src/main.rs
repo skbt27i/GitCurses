@@ -63,7 +63,7 @@ window.refresh();
   }
 
   let url = hello;
-  let mut owned_string: String = "findstr /m /s /n ".to_owned();
+  let mut owned_string: String = "findstr /s /i /n ".to_owned();
   owned_string.push_str(&search_string);
   owned_string.push_str(" *.*");
   let repo = match Repository::clone(&url, "newRepo") {
@@ -73,7 +73,7 @@ window.refresh();
 
   let output = Command::new("cmd")
   .args(&["/C", &owned_string])
-  .status()
+  .spawn()
   .expect("Failed to execute");
 
   
