@@ -2,10 +2,11 @@
 name = "GitCurses"
 version = "0.1.0"
 authors = ["Santosh <stirumala@ufl.edu>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 pancurses = "0.16"
 git2 = "0.13"
+remove_dir_all = "0.7.0"
